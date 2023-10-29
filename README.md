@@ -7,10 +7,6 @@ This repo is a series of standalone scripts (.ps1, .bat, py) that leverage AWS T
 
 ```mermaid
   flowchart  TD;
-      A-->B;
-      A-->id1[/This is the text in the box/];
-      B-->D;
-      id1-->D;
     subgraph Phase1
     s1[/batch-aws-upload.ps1/]--upload-->aws3[/AWS-S3s\]
     end
@@ -35,7 +31,8 @@ This repo is a series of standalone scripts (.ps1, .bat, py) that leverage AWS T
     s5-->f5(*filename*.json)
     end
     subgraph Phase5
-    f3-->c2
+    f5-->py1[/get-rawtext2.py/]
+    py1-->f6(*filename*_out.json)
     end
 ```
 
